@@ -1,17 +1,19 @@
 //  Main Color
-$body-bg: #fff;
-$text-color: #333;
+$body-bg: #ffffff;
+$text-color: #666666;
 
 // Color link
-$link-color: #55b3f3;
+$menu-link-color: #ffffff;
+$menu-link-color--hover: darken($menu-link-color, 20%);
+$link-color: #666666;
 $link-color--hover: darken($link-color, 20%);
 
 //  Typography
-$font-family: 'Roboto', Helvetica, Arial, sans-serif;
+$font-family: 'Oswald', Helvetica, Arial, sans-serif;
 // $font-family--helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // Main Typography variables
-$font-size: 14px;
+$font-size: 20px;
 $font-weight: 400; // Regular
 $line-height: 1.2;
 

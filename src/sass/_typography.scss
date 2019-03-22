@@ -1,30 +1,40 @@
 //  Include fonts
 
-// font-family: 'Roboto';
+// font-family: 'Oswald';
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Oswald';
   font-weight: normal;
-  src: local('Roboto'), local('Roboto-Regular');
-  src: url('../fonts/Roboto-Regular.eot');
-  src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Roboto-Regular.woff2') format('woff2'),
-  url('../fonts/Roboto-Regular.woff') format('woff'),
-  url('../fonts/Roboto-Regular.ttf') format('truetype'),
-  url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  src: local('Oswald'), local('Oswald-Regular');
+  src: url('../fonts/oswald-regular.eot');
+  src: url('../fonts/oswald-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/oswald-regular.woff2') format('woff2'),
+  url('../fonts/oswald-regular.woff') format('woff'),
+  url('../fonts/oswald-regular.ttf') format('truetype'),
+  url('../fonts/oswald-regular.svg#oswald-regular') format('svg');
 }
 
-// font-family: 'Roboto';
-// font-weight: 700;
+//font-family: 'GaramondPremrPro';
 @font-face {
-  font-family: 'Roboto';
-  font-weight: 700;
-  src: local('Roboto'), local('Roboto-Bold');
-  src: url('../fonts/Roboto-Bold.eot');
-  src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Roboto-Bold.woff2') format('woff2'),
-  url('../fonts/Roboto-Bold.woff') format('woff'),
-  url('../fonts/Roboto-Bold.ttf') format('truetype'),
-  url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+  font-family: 'GaramondPremrPro';
+  font-weight: normal;
+  src: local('GaramondPremrPro');
+  src: url('../fonts/GaramondPremrPro.eot');
+  src: url('../fonts/GaramondPremrPro.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GaramondPremrPro.woff2') format('woff2'),
+  url('../fonts/GaramondPremrPro.woff') format('woff'),
+  url('../fonts/GaramondPremrPro.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GaramondPremrPro';
+  font-style: italic;
+  font-weight: normal;
+  src: local('GaramondPremrPro');
+  src: url('../fonts/GaramondPremrPro-It.eot');
+  src: url('../fonts/GaramondPremrPro-It.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GaramondPremrPro-It.woff2') format('woff2'),
+  url('../fonts/GaramondPremrPro-It.woff') format('woff'),
+  url('../fonts/GaramondPremrPro-It.ttf') format('truetype');
 }
 
 // Main title style

@@ -1,0 +1,176 @@
+.history {
+  padding-top: 100px;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__content h3 {
+    margin: 0;
+
+    font-size: 20px;
+
+    text-transform: uppercase;
+  }
+
+  &__content p {
+    margin: 0;
+    margin-top: 20px;
+
+    font-family: 'GaramondPremrPro';
+  }
+}
+
+.gallery {
+  &__list {
+    @include clearlist;
+    display: flex;
+
+    margin-top: 50px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.subscribe {
+  margin-top: 100px;
+
+  &__form {
+    display: flex;
+
+    position: relative;
+
+    margin: 0 auto;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 664px;
+
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+
+      top: -5px;
+      left: -10px;
+      right: -10px;
+
+      height: 2px;
+
+      background-color: #666666;
+    }
+
+    &::after {
+      top: auto;
+      bottom: -5px;
+    }
+  }
+
+  &__text {
+    flex-basis: 135px;
+
+    align-self: center;
+
+    font-family: 'GaramondPremrPro';
+  }
+
+  &__input {
+    position: relative;
+
+    flex-basis: 330px;
+
+    border: none;
+  }
+
+  &__button {
+    position: relative;
+
+    flex-basis: 175px;
+
+    color: #781241;
+
+    text-transform: uppercase;
+
+    background-color: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    &:hover {
+      color: #333333;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      top: -5px;
+      left: 0;
+      bottom: -5px;
+
+      width: 1px;
+
+      background-color: #666666;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+
+    top: 30px;
+    right: 0;
+  }
+}
+
+.meet {
+  margin-top: 90px;
+
+  &__wrapper {
+    padding-top: 100px;
+
+    min-height: 430px;
+
+    background-image: url('../images/bottom-banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__content {
+    margin: 0 auto;
+
+    width: 370px;
+    height: 215px;
+
+    border: 2px solid #781241;
+    outline: 10px solid #ffffff;
+
+    background-color: #ffffff;
+
+    text-align: center;
+  }
+
+  &__content h3 {
+    margin: 0;
+    margin-top: 30px;
+
+    font-size: 20px;
+
+    text-transform: uppercase;
+  }
+
+  &__content p {
+    margin: 0;
+    margin-top: 40px;
+
+    font-family: 'GaramondPremrPro';
+    font-style: italic;
+  }
+}

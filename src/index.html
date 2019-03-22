@@ -2,19 +2,117 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Page Title</title>
+	<title>Nevada</title>
 	<meta name="description" content="">
 	@@include('_include/head.html')
 </head>
 
 <body>
-	@@include('_include/header.html')
 
-	<div class="page-container">
-		<h1>Hello world!</h1>
+	<div class="page-header__wrapper">
+			@@include('_include/header.html')
+
+			<div class="page-header__banner">
+				<img class="page-header__logo" src="images/logo-big.png" width="254" height="146" alt="photo">
+			</div>
 	</div>
 
-	@@include('_include/footer.html')
+	<div class="page-container">
+
+		<main>
+
+			<section class="history">
+
+				<div class="history__wrapper">
+
+					<div class="history__content">
+						<h3>
+							Our story
+						</h3>
+
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipisc ing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.<br>
+							Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipisc ing elit, sed diam<br>
+							nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor<br>
+							sit amet, consectetuer adipisc ing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.<br>
+							Dolore magna aliquam erat volutpat.
+						</p>
+					</div>
+
+				</div>
+
+			</section>
+
+			<section class="gallery">
+
+				<div class="gallery__wrapper">
+
+					<ul class="gallery__list">
+						<li>
+							<img class="gallery__photo" src="images/gallery-1.png" width="367" height="315" alt="gallery-photo">
+						</li>
+						<li>
+							<img class="gallery__photo" src="images/gallery-2.png" width="367" height="315" alt="gallery-photo">
+						</li>
+						<li>
+							<img class="gallery__photo" src="images/gallery-3.png" width="367" height="315" alt="gallery-photo">
+						</li>
+					</ul>
+
+				</div>
+
+			</section>
+
+			<section class="subscribe">
+
+				<div class="subscribe__wrapper">
+
+					<form class="subscribe__form" method="post" action="#">
+						<label class="subscribe__text" for="subscribe-input">
+							Enter your e-mail
+						</label>
+						<input class="subscribe__input" type="email" name="mail" id="subscribe-input">
+						<button class="subscribe__button button" type="submit">
+							Subscribe
+							<svg class="subscribe__icon" version="1.1" id="РЎР»РѕР№_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 viewBox="0 0 15.8 27.4" style="enable-background:new 0 0 15.8 27.4; fill: #781241;" xml:space="preserve" width="8px" height="14px">
+							<g>
+								<path d="M2.2,0.1l13.5,13.3c0.1,0.2,0.1,0.4,0,0.5L2.2,27.3c-0.1,0.1-0.3,0.1-0.5,0L0,25.6l11.7-11.7
+									c0.2-0.1,0.2-0.3,0-0.5L0,1.8l1.6-1.7C1.9,0,2.1,0,2.2,0.1L2.2,0.1z"/>
+							</g>
+							</svg>
+						</button>
+					</form>
+
+				</div>
+
+			</section>
+
+			<section class="meet">
+
+				<div class="meet__wrapper">
+
+					<div class="meet__content">
+						<h3>
+							Meet us
+						</h3>
+
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer<br>
+							dipisc ing elit, sed diam nonummy nibh<br>
+							euismod tincidunt ut laoreet.<br>
+						</p>
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+
+		@@include('_include/footer.html')
+
+	</div>
 	@@include('_include/inc_script.html')
 </body>
 </html>
