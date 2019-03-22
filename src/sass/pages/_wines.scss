@@ -1,0 +1,137 @@
+.page-header__wrapper--wines {
+  background-image: url('../images/wines-banner.png');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  min-height: 372px;
+}
+
+.page-header__banner--wines {
+  margin-top: 35px;
+}
+
+.wines {
+  &__title {
+    margin: 0;
+    margin-top: 95px;
+
+    font-size: 20px;
+
+    text-align: center;
+  }
+
+  &__list {
+    @include clearlist;
+    display: flex;
+
+    margin: 0 10px;
+    margin-top: 50px;
+
+    position: relative;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      top: -5px;
+      left: -10px;
+      right: -10px;
+
+      height: 2px;
+
+      background-color: #666666;
+    }
+  }
+
+  &__list > li {
+    border-top: 1px solid #666666;
+  }
+
+  &__list > li:last-child {
+    border-bottom: 1px solid #666666;
+  }
+
+  &__sub-list {
+    @include clearlist;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__sub-list > li:first-child {
+    position: relative;
+
+    flex-basis: 45%;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      top: 30px;
+      right: 40px;
+
+      width: 40px;
+      height: 68px;
+
+      background-image: url('../images/icon-bottle.svg');
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      position: absolute;
+      content: '0,75 l';
+
+      font-family: 'GaramondPremrPro';
+      font-size: 14px;
+      color: #781241;
+
+      top: 59px;
+      right: 29px;
+    }
+  }
+
+  &__photo {
+    display: block;
+
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  &__sub-list > li:last-child {
+    padding: 30px;
+
+    position: relative;
+
+    flex-basis: 55%;
+
+    border-left: 1px solid red;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      top: -5px;
+      left: 0;
+      bottom: 0;
+
+      width: 1px solid #666666;
+    }
+  }
+
+  &__sub-list h3 {
+    margin: 0;
+
+    font-size: 20px;
+  }
+
+  &__sub-list p {
+    margin: 0;
+    margin-top: 30px;
+
+    font-family: 'GaramondPremrPro';
+  }
+}
