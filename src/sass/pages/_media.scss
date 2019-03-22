@@ -1,0 +1,63 @@
+.page-header__wrapper--media {
+  background-image: url('../images/media-banner.png');
+
+  min-height: 372px;
+}
+
+.page-header__banner--media {
+  margin-top: 35px;
+}
+
+.media {
+  &__title {
+    margin: 0;
+    margin-top: 100px;
+
+    font-size: 20px;
+
+    text-align: center;
+  }
+
+  &__list {
+    @include clearlist;
+  }
+
+  &__list time {
+    font-family: 'GaramondPremrPro';
+    font-size: 16px;
+  }
+
+  &__list h3 {
+    margin: 0;
+    margin-top: 20px;
+
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  &__list p {
+    margin: 0;
+    margin-top: 30px;
+
+    font-family: 'GaramondPremrPro';
+  }
+
+  &__list a {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding-right: 48px;
+
+    position: relative;
+
+    text-transform: uppercase;
+  }
+
+  &__list svg {
+    position: absolute;
+
+    top: 6px;
+    right: 0;
+  }
+}

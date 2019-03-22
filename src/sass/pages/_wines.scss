@@ -1,7 +1,5 @@
 .page-header__wrapper--wines {
   background-image: url('../images/wines-banner.png');
-  background-repeat: no-repeat;
-  background-position: center;
 
   min-height: 372px;
 }
@@ -16,6 +14,8 @@
     margin-top: 95px;
 
     font-size: 20px;
+
+    text-transform: uppercase;
 
     text-align: center;
   }
@@ -108,8 +108,6 @@
 
     flex-basis: 55%;
 
-    border-left: 1px solid red;
-
     &::before {
       position: absolute;
       content: '';
@@ -118,20 +116,32 @@
       left: 0;
       bottom: 0;
 
-      width: 1px solid #666666;
+      width: 1px;
+
+      background-color: #666666;
     }
   }
 
   &__sub-list h3 {
     margin: 0;
+    padding-bottom: 10px;
 
     font-size: 20px;
+
+    text-transform: uppercase;
   }
 
   &__sub-list p {
     margin: 0;
-    margin-top: 30px;
+    margin-top: 20px;
 
     font-family: 'GaramondPremrPro';
+  }
+
+  &__sub-list h4 {
+    margin: 0;
+    margin-top: 20px;
+
+    text-transform: uppercase;
   }
 }
