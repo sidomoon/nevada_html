@@ -1,6 +1,5 @@
 .page-header__wrapper--wines {
   background-image: url('../images/wines-banner.png');
-
   min-height: 372px;
 }
 
@@ -9,74 +8,64 @@
 }
 
 .wines {
+  &__wrapper {
+    margin-bottom: 105px;
+  }
+
   &__title {
     margin: 0;
     margin-top: 95px;
-
     font-size: 20px;
-
     text-transform: uppercase;
-
     text-align: center;
   }
 
   &__list {
     @include clearlist;
     display: flex;
-
     margin: 0 10px;
     margin-top: 50px;
-
     position: relative;
-
     flex-direction: column;
     flex-wrap: wrap;
 
     &::before {
       position: absolute;
       content: '';
-
       top: -5px;
       left: -10px;
       right: -10px;
-
       height: 2px;
-
       background-color: #666666;
     }
   }
 
-  &__list > li {
+  &__item {
     border-top: 1px solid #666666;
   }
 
-  &__list > li:last-child {
+  &__item:last-child {
     border-bottom: 1px solid #666666;
   }
 
   &__sub-list {
     @include clearlist;
     display: flex;
-
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  &__sub-list > li:first-child {
+  &__sub-item:first-child {
     position: relative;
-
-    flex-basis: 45%;
+    width: 45%;
 
     &::before {
       position: absolute;
       content: '';
-
       top: 30px;
       right: 40px;
-
       width: 40px;
       height: 68px;
-
       background-image: url('../images/icon-bottle.svg');
       background-repeat: no-repeat;
     }
@@ -84,64 +73,52 @@
     &::after {
       position: absolute;
       content: '0,75 l';
-
-      font-family: 'GaramondPremrPro';
+      font-family: $font-family--garamond;
       font-size: 14px;
       color: #781241;
-
       top: 59px;
       right: 29px;
     }
   }
 
-  &__photo {
+  &__sub-photo {
     display: block;
-
     margin: 0 auto;
     margin-top: 30px;
   }
 
-  &__sub-list > li:last-child {
+  &__sub-item:last-child {
     padding: 30px;
-
     position: relative;
-
-    flex-basis: 55%;
+    width: 55%;
 
     &::before {
       position: absolute;
       content: '';
-
       top: -5px;
       left: 0;
       bottom: 0;
-
       width: 1px;
-
       background-color: #666666;
     }
   }
 
-  &__sub-list h3 {
+  &__sub-item + .wines__sub-title {
     margin: 0;
     padding-bottom: 10px;
-
     font-size: 20px;
-
     text-transform: uppercase;
   }
 
-  &__sub-list p {
+  &__sub-text {
     margin: 0;
     margin-top: 20px;
-
-    font-family: 'GaramondPremrPro';
+    font-family: $font-family--garamond;
   }
 
-  &__sub-list h4 {
+  &__sub-title {
     margin: 0;
     margin-top: 20px;
-
     text-transform: uppercase;
   }
 }

@@ -4,22 +4,17 @@
   &__list {
     @include clearlist;
     display: flex;
-
     margin: 0 auto;
     padding-top: 40px;
-
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
     max-width: 450px;
-
     text-transform: uppercase;
   }
 
   &__link {
     position: relative;
-
     color: $menu-link-color;
 
     &:hover {
@@ -29,13 +24,10 @@
     &:hover::before {
       position: absolute;
       content: '';
-
       bottom: 0;
       left: 0;
       right: 0;
-
       height: 2px;
-
       background-color: #ffffff;
     }
   }
@@ -44,7 +36,6 @@
     background-image: url('../images/main-banner.png');
     background-repeat: no-repeat;
     background-position: center;
-
     min-height: 721px;
   }
 
@@ -52,11 +43,9 @@
     margin: 0 auto;
     margin-top: 180px;
     padding: 40px 60px;
-
     background-color: #ffffff;
     border: 2px solid #781241;
     outline: 10px solid #ffffff;
-
     width: 390px;
   }
 }

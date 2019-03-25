@@ -5,19 +5,16 @@
     text-align: center;
   }
 
-  &__content h3 {
+  &__title {
     margin: 0;
-
     font-size: 20px;
-
     text-transform: uppercase;
   }
 
-  &__content p {
+  &__text {
     margin: 0;
     margin-top: 20px;
-
-    font-family: 'GaramondPremrPro';
+    font-family: $font-family--garamond;
   }
 }
 
@@ -25,9 +22,7 @@
   &__list {
     @include clearlist;
     display: flex;
-
     margin-top: 50px;
-
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -39,17 +34,11 @@
 
   &__form {
     display: flex;
-
     position: relative;
-
     margin: 0 auto;
-
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-
-    width: 664px;
-
+    width: 57%;
     border-top: 1px solid #666666;
     border-bottom: 1px solid #666666;
 
@@ -57,13 +46,10 @@
     &::after {
       position: absolute;
       content: '';
-
       top: -5px;
       left: -10px;
       right: -10px;
-
       height: 2px;
-
       background-color: #666666;
     }
 
@@ -74,57 +60,46 @@
   }
 
   &__text {
-    flex-basis: 135px;
-
+    width: 280px;
     align-self: center;
-
-    font-family: 'GaramondPremrPro';
+    font-family: $font-family--garamond;
   }
 
   &__input {
     position: relative;
-
-    flex-basis: 330px;
-
     border: none;
   }
 
   &__button {
     position: relative;
-
-    flex-basis: 175px;
-
+    width: 365px;
     color: #781241;
-
     text-transform: uppercase;
-
     background-color: transparent;
-
     border: none;
-
     cursor: pointer;
 
     &:hover {
       color: #333333;
     }
 
+    &:hover path {
+      fill: #333333;
+    }
+
     &::before {
       position: absolute;
       content: '';
-
       top: -5px;
       left: 0;
       bottom: -5px;
-
       width: 1px;
-
       background-color: #666666;
     }
   }
 
   &__icon {
     position: absolute;
-
     top: 30px;
     right: 0;
   }
@@ -132,12 +107,11 @@
 
 .meet {
   margin-top: 90px;
+  margin-bottom: 105px;
 
   &__wrapper {
     padding-top: 100px;
-
     min-height: 430px;
-
     background-image: url('../images/bottom-banner.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -145,32 +119,25 @@
 
   &__content {
     margin: 0 auto;
-
     width: 370px;
     height: 215px;
-
     border: 2px solid #781241;
     outline: 10px solid #ffffff;
-
     background-color: #ffffff;
-
     text-align: center;
   }
 
-  &__content h3 {
+  &__title {
     margin: 0;
     margin-top: 30px;
-
     font-size: 20px;
-
     text-transform: uppercase;
   }
 
-  &__content p {
+  &__text {
     margin: 0;
     margin-top: 40px;
-
-    font-family: 'GaramondPremrPro';
+    font-family: $font-family--garamond;
     font-style: italic;
   }
 }

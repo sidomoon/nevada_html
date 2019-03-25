@@ -1,6 +1,5 @@
 .page-header__wrapper--media {
   background-image: url('../images/media-banner.png');
-
   min-height: 372px;
 }
 
@@ -12,52 +11,102 @@
   &__title {
     margin: 0;
     margin-top: 100px;
-
     font-size: 20px;
-
     text-align: center;
   }
 
   &__list {
     @include clearlist;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  &__list time {
-    font-family: 'GaramondPremrPro';
+  &__item {
+    width: 48%;
+  }
+
+  &__sub-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sub-item:first-child {
+    position: relative;
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      height: 2px;
+      background-color: #666666;
+    }
+
+    &::after {
+      top: auto;
+      bottom: 2px;
+    }
+  }
+
+  &__sub-date {
+    display: block;
+    margin-top: 30px;
+    font-family: $font-family--garamond;
     font-size: 16px;
   }
 
-  &__list h3 {
+  &__sub-title {
     margin: 0;
     margin-top: 20px;
-
     font-size: 20px;
     text-transform: uppercase;
   }
 
-  &__list p {
+  &__sub-text {
     margin: 0;
     margin-top: 30px;
-
-    font-family: 'GaramondPremrPro';
+    font-family: $font-family--garamond;
   }
 
-  &__list a {
-    display: inline-block;
-
+  &__sub-link {
     margin-top: 30px;
-
+    margin-bottom: 50px;
     padding-right: 48px;
-
     position: relative;
-
+    color: #781241;
     text-transform: uppercase;
+    float: right;
+
+    &:hover {
+      color: #333333;
+    }
+
+    &:hover path {
+      fill: #333333;
+    }
   }
 
-  &__list svg {
+  &__sub-icon {
     position: absolute;
-
     top: 6px;
     right: 0;
+
+    path {
+      fill: #781241;
+    }
+  }
+
+  &__sub-photo {
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
   }
 }

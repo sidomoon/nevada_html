@@ -1,35 +1,25 @@
 .page-footer {
-	margin-top: 100px;
-
 	position: relative;
 
 	&__list {
 		@include clearlist;
 		display: flex;
-
 		position: relative;
-
 		margin: 0 auto;
-
 		flex-direction: row;
 		flex-wrap: wrap;
-
 		border-top: 1px solid #666666;
 		border-bottom: 1px solid #666666;
-
 		width: 98%;
 
 		&::before,
 		&::after {
 			position: absolute;
 			content: '';
-
 			top: -5px;
 			left: -10px;
 			right: -10px;
-
 			height: 2px;
-
 			background-color: #666666;
 		}
 
@@ -39,25 +29,19 @@
 		}
 	}
 
-	&__list > li {
+	&__item {
 		padding-bottom: 15px;
-
 		position: relative;
-
-		flex-basis: 32%;
-
+		width: 32%;
 		text-align: center;
 
 		&::before {
 			position: absolute;
 			content: '';
-
 			top: -5px;
 			right: 0;
 			bottom: -5px;
-
 			width: 1px;
-
 			background-color: #666666;
 		}
 
@@ -66,20 +50,18 @@
 		}
 	}
 
-	&__list h4 {
+	&__title {
 		margin: 0;
 		margin-top: 40px;
 		margin-bottom: 20px;
-
 		text-transform: uppercase;
 	}
 
-	&__list p,
-	&__list a {
+	&__text,
+	&__link {
 		margin: 0;
 		padding: 0;
-
-		font-family: 'GaramondPremrPro';
+		font-family: $font-family--garamond;
 		font-style: italic;
 		font-size: 16px;
 	}
@@ -87,23 +69,23 @@
 	&__social-list {
 		@include clearlist;
 		display: flex;
-
 		margin: 0 auto;
-
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
-
 		width: 100px;
 	}
 
-	&__social-link:hover svg {
-		fill: red;
+	&__social-link {
+		display: block;
+
+		&:hover .page-footer__social-icon path {
+			fill: #781241;
+		}
 	}
 
 	&__logo {
 		display: block;
-
 		margin: 0 auto;
 		margin-top: 30px;
 	}
@@ -112,11 +94,9 @@
 		margin: 0;
 		margin-top: 25px;
 		margin-bottom: 35px;
-
-		font-family: 'GaramondPremrPro';
+		font-family: $font-family--garamond;
 		font-style: italic;
 		font-size: 16px;
-
 		text-align: center;
 	}
 }
