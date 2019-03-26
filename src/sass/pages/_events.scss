@@ -18,7 +18,112 @@
 
   &__list {
     display: flex;
+    margin-top: 50px;
+    margin-bottom: 65px;
+    position: relative;
     flex-direction: column;
     flex-wrap: wrap;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      height: 2px;
+      background-color: #666666;
+    }
+  }
+
+  &__item {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border-top: 1px solid #666666;
+  }
+
+  &__sub-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__sub-item:first-child {
+    margin-right: 15px;
+  }
+
+  &__sub-date {
+    display: block;
+    padding: 14px 0;
+    width: 75px;
+    height: 75px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #781241;
+  }
+
+  &__sub-title {
+    margin: 0;
+    margin-top: -2px;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  &__sub-text {
+    margin: 0;
+    margin-top: 12px;
+    font-family: $font-family--garamond;
+  }
+
+  &__sub-link {
+    display: block;
+    margin-top: 20px;
+    padding-right: 35px;
+    position: relative;
+    color: #781241;
+    text-transform: uppercase;
+    float: right;
+
+    &:hover {
+      color: #333333;
+    }
+
+    &:hover path {
+      fill: #333333;
+    }
+  }
+
+  &__sub-icon {
+    position: absolute;
+    top: 5px;
+    right: 0;
+
+    path {
+      fill: #781241;
+    }
+  }
+
+  &__sidebar {
+    margin-top: 50px;
+    margin-left: 70px;
+    position: relative;
+    float: right;
+    border-top: 1px solid #666666;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -6px;
+      left: -5px;
+      right: -5px;
+      height: 2px;
+      background-color: #666666;
+    }
+  }
+
+  &__calendar {
+    margin-top: 30px;
+    width: 290px;
+    height: 345px;
+    background-color: #781241;
   }
 }
