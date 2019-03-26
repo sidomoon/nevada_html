@@ -67,7 +67,6 @@
 	}
 
 	&__social-list {
-		@include clearlist;
 		display: flex;
 		margin: 0 auto;
 		flex-direction: row;

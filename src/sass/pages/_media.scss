@@ -80,6 +80,7 @@
     margin-bottom: 50px;
     padding-right: 48px;
     position: relative;
+    font-size: 15px;
     color: #781241;
     text-transform: uppercase;
     float: right;
@@ -95,7 +96,7 @@
 
   &__sub-icon {
     position: absolute;
-    top: 6px;
+    top: 2px;
     right: 0;
 
     path {

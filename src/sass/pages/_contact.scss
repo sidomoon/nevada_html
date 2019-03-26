@@ -1,0 +1,125 @@
+.page-header__wrapper--contact {
+  background-image: url('../images/contact-banner.png');
+  min-height: 372px;
+}
+
+.page-header__banner--contact {
+  margin-top: 35px;
+}
+
+.contact {
+  &__title {
+    margin: 0;
+    margin-top: 100px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 110px;
+    font-family: $font-family--garamond;
+    text-align: center;
+  }
+
+  &__map {
+    margin-top: 105px;
+    width: 100%;
+    height: auto;
+  }
+
+  &__form-wrapper {
+    margin-top: 100px;
+    padding-top: 120px;
+    background-image: url('../images/form-photo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 730px;
+  }
+
+  &__form {
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 480px;
+    height: 497px;
+    border: 2px solid #781241;
+    background-color: #ffffff;
+    outline: 15px solid #ffffff;
+
+    div {
+      position: relative;
+    }
+
+    input,
+    textarea {
+      font-family: $font-family--garamond;
+      border: none;
+      border-bottom: 1px solid #333333;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    input:focus + span,
+    input:not(:focus):valid + span,
+    textarea:focus + span,
+    textarea:not(:focus):valid + span {
+      top: 2px;
+      left: 15px;
+      font-size: 14px;
+    }
+
+    span {
+      position: absolute;
+      font-family: $font-family--garamond;
+      pointer-events: none;
+      top: 23px;
+      left: 15px;
+      transition: 0.2s;
+    }
+  }
+
+  &__form-title {
+    margin: 0;
+    margin-top: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__button {
+    margin-top: 15px;
+    padding-right: 45px;
+    position: relative;
+    font-size: 15px;
+    color: #781241;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    float: right;
+    cursor: pointer;
+
+    &:hover {
+      color: #333333;
+    }
+
+    &:hover path {
+      fill: #333333;
+    }
+
+    path {
+      fill: #781241;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 2px;
+    right: 0;
+  }
+}
