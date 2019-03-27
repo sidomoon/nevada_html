@@ -19,6 +19,10 @@
 
     &:hover {
       color: $menu-link-color--hover;
+
+      @include max-w($screen-xl) {
+        color: red;
+      }
     }
 
     &:hover::before {
@@ -36,6 +40,7 @@
     background-image: url('../images/main-banner.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     min-height: 721px;
   }
 

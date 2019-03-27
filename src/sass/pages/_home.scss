@@ -59,14 +59,24 @@
     }
   }
 
-  &__text {
-    width: 280px;
-    align-self: center;
-    font-family: $font-family--garamond;
+  &__form--focus {
+    &::before,
+    &::after {
+      background-color: #781241;
+    }
+  }
+
+  &__form--not-valid {
+    &::before,
+    &::after {
+      background-color: #ff0000;
+    }
   }
 
   &__input {
+    margin-left: -15px;
     position: relative;
+    font-family: $font-family--garamond;
     border: none;
   }
 
