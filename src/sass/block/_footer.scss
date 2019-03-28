@@ -30,9 +30,9 @@
 	}
 
 	&__item {
-		padding-bottom: 15px;
+		padding-bottom: 30px;
 		position: relative;
-		width: 32%;
+		width: 33.3%;
 		text-align: center;
 
 		&::before {
@@ -54,6 +54,7 @@
 		margin: 0;
 		margin-top: 40px;
 		margin-bottom: 20px;
+		color: #333333;
 		text-transform: uppercase;
 	}
 
@@ -66,9 +67,14 @@
 		font-size: 16px;
 	}
 
+	&__link {
+		display: block;
+	}
+
 	&__social-list {
 		display: flex;
 		margin: 0 auto;
+		margin-top: -5px;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -80,6 +86,13 @@
 
 		&:hover .page-footer__social-icon path {
 			fill: #781241;
+		}
+	}
+
+	&__social-icon {
+		path {
+			fill: #333333;
+			transition: 0.5s;
 		}
 	}
 

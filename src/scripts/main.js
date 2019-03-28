@@ -19,11 +19,23 @@ $(document).ready(function () {
   });
   /* /input validation */
 
-  /* placeholder to top */
+  /* placeholder to top input */
   $('.contact__input').focus(function () {
     $(this).addClass('contact__input--focus');
   }).blur(function () {
-    $(this).removeClass('contact__input--focus');
+    if ($(this).is(':invalid')) {
+      $(this).removeClass('contact__input--focus');
+    }
   });
-  /* /placeholder to top */
+  /* /placeholder to top input */
+
+  /* placeholder to top textarea */
+  $('.contact__textarea').focus(function () {
+    $(this).addClass('contact__textarea--focus');
+  }).blur(function () {
+    if ($(this).is(':invalid')) {
+      $(this).removeClass('contact__textarea--focus');
+    }
+  });
+  /* /placeholder to top textarea */
 });

@@ -8,6 +8,7 @@
   &__title {
     margin: 0;
     font-size: 20px;
+    color: #333333;
     text-transform: uppercase;
   }
 
@@ -22,10 +23,16 @@
   &__list {
     @include clearlist;
     display: flex;
+    margin: 0 -15px;
     margin-top: 50px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  &__item {
+    padding: 0 15px;
+    width: 33.3%;
   }
 }
 
@@ -41,6 +48,7 @@
     width: 57%;
     border-top: 1px solid #666666;
     border-bottom: 1px solid #666666;
+    height: 60px;
 
     &::before,
     &::after {
@@ -77,12 +85,17 @@
     margin-left: -15px;
     position: relative;
     font-family: $font-family--garamond;
+    color: #333333;
     border: none;
+
+    &:invalid {
+      box-shadow: none;
+    }
   }
 
   &__button {
     position: relative;
-    width: 365px;
+    width: 265px;
     font-size: 15px;
     color: #781241;
     text-transform: uppercase;
@@ -92,6 +105,12 @@
 
     &:hover {
       color: #333333;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
     }
 
     &:hover path {
@@ -111,7 +130,7 @@
 
   &__icon {
     position: absolute;
-    top: 30px;
+    top: 22px;
     right: 0;
   }
 }
@@ -142,12 +161,13 @@
     margin: 0;
     margin-top: 30px;
     font-size: 20px;
+    color: #333333;
     text-transform: uppercase;
   }
 
   &__text {
     margin: 0;
-    margin-top: 40px;
+    margin-top: 30px;
     font-family: $font-family--garamond;
     font-style: italic;
   }

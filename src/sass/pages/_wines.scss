@@ -16,6 +16,7 @@
     margin: 0;
     margin-top: 95px;
     font-size: 20px;
+    color: #333333;
     text-transform: uppercase;
     text-align: center;
   }
@@ -69,22 +70,21 @@
       background-image: url('../images/icon-bottle.svg');
       background-repeat: no-repeat;
     }
-
-    &::after {
-      position: absolute;
-      content: '0,75 l';
-      font-family: $font-family--garamond;
-      font-size: 14px;
-      color: #781241;
-      top: 59px;
-      right: 29px;
-    }
   }
 
   &__sub-photo {
     display: block;
     margin: 0 auto;
     margin-top: 30px;
+  }
+
+  &__sub-value {
+    position: absolute;
+    font-family: $font-family--garamond;
+    font-size: 15px;
+    color: #781241;
+    top: 58.4px;
+    right: 29px;
   }
 
   &__sub-item:last-child {
@@ -112,13 +112,22 @@
 
   &__sub-text {
     margin: 0;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: $font-family--garamond;
+
+    b {
+      color: #333333;
+    }
   }
 
   &__sub-title {
     margin: 0;
     margin-top: 20px;
+    color: #333333;
     text-transform: uppercase;
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
   }
 }

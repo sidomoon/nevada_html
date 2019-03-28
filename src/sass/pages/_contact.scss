@@ -65,15 +65,6 @@
       resize: none;
     }
 
-    input:focus + span,
-    input:not(:focus):valid + span,
-    textarea:focus + span,
-    textarea:not(:focus):valid + span {
-      top: 2px;
-      left: 15px;
-      font-size: 14px;
-    }
-
     span {
       position: absolute;
       font-family: $font-family--garamond;
@@ -90,6 +81,13 @@
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
+  }
+
+  &__input--focus + span,
+  &__textarea--focus + span {
+    top: 2px;
+    left: 15px;
+    font-size: 14px;
   }
 
   &__button {

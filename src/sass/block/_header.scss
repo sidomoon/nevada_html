@@ -18,11 +18,7 @@
     color: $menu-link-color;
 
     &:hover {
-      color: $menu-link-color--hover;
-
-      @include max-w($screen-xl) {
-        color: red;
-      }
+      color: #ffffff;
     }
 
     &:hover::before {
