@@ -35,7 +35,45 @@
 
 				@@include('_include/footer-top.html')
 
-				<img class="contact__map" src="images/map.png" width="1140" height="430" alt="contact-map">
+				<div class="contact__map-wrapper">
+
+					<img class="contact__map" src="images/map.png" width="1140" height="430" alt="contact-map">
+
+					<div class="contact__schedule">
+
+						<h4 class="contact__schedule-title">
+							working hours
+						</h4>
+						<table class="contact__schedule-table">
+							<tr class="contact__schedule-item">
+								<td class="contact__schedule-date">
+									Thursday:
+								</td>
+								<td class="contact__schedule-time">
+									 4 PM - 9 PM
+								</td>
+							</tr>
+							<tr class="contact__shedule-item">
+								<td class="contact__schedule-date">
+									Friday:
+								</td>
+								<td class="contact__schedule-time">
+									 4 PM - 9 PM
+								</td>
+							</tr>
+							<tr class="contact__schedule-item">
+								<td class="contact__schedule-date">
+									Saturday:
+								</td>
+								<td class="contact__schedule-time">
+									 4 PM - 9 PM
+								</td>
+							</tr>
+						</table>
+						
+					</div>
+
+				</div>
 
 				<div class="contact__form-wrapper">
 
@@ -44,26 +82,25 @@
 							get in touch
 						</h3>
 						<div>
-							<input class="contact__input" type="text" required>
+							<input class="contact__input contact__js" type="text" required>
 							<span>
 								Enter your Name
 							</span>
 						</div>
 						<div>
-							<input class="contact__input" type="email" required>
+							<input class="contact__input contact__js" type="email" required>
 							<span>
 								Enter your E-mail
 							</span>
 						</div>
 						<div>
-							<input class="contact__input" type="text" required>
+							<input class="contact__input contact__js" type="text" required>
 							<span>
 								Enter your Subject
 							</span>
 						</div>
 						<div>
-							<textarea class="contact__textarea" rows="4" required>
-							</textarea>
+							<textarea class="contact__textarea contact__js" rows="4" required></textarea>
 							<span>
 								Message
 							</span>

@@ -41,14 +41,13 @@
 
   &__form {
     display: flex;
-    position: relative;
     margin: 0 auto;
+    position: relative;
     flex-direction: row;
     justify-content: space-between;
     width: 57%;
     border-top: 1px solid #666666;
     border-bottom: 1px solid #666666;
-    height: 60px;
 
     &::before,
     &::after {
@@ -82,7 +81,6 @@
   }
 
   &__input {
-    margin-left: -15px;
     position: relative;
     font-family: $font-family--garamond;
     color: #333333;
@@ -133,6 +131,10 @@
     top: 22px;
     right: 0;
   }
+}
+
+input[type="email"].subscribe__input {
+  padding: 5px 0;
 }
 
 .meet {

@@ -5,7 +5,8 @@
   },
   "assets": {
     "addJs": [
-      "./node_modules/jquery/dist/jquery.min.js"
+      "./node_modules/jquery/dist/jquery.min.js",
+      "./src/libs/js/masonry.pkgd.min.js"
     ],
     "addCss": [
       "./src/libs/css/normalize.css"

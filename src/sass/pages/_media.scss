@@ -12,34 +12,32 @@
     margin: 0;
     margin-top: 100px;
     font-size: 20px;
+    color: #333333;
     text-align: center;
   }
 
   &__list {
-    @include clearlist;
     display: flex;
     margin-top: 50px;
     margin-bottom: 50px;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  &__item {
-    width: 48%;
-  }
-
-  &__sub-list {
-    display: flex;
     flex-direction: column;
   }
 
-  &__sub-item:first-child {
+  &__item {
     position: relative;
+    width: 48%;
     border-top: 1px solid #666666;
-    border-bottom: 1px solid #666666;
 
-    &::before,
-    &::after {
+    .media__title {
+      margin: 0;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333333;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    &::before {
       position: absolute;
       content: '';
       top: -5px;
@@ -48,34 +46,22 @@
       height: 2px;
       background-color: #666666;
     }
-
-    &::after {
-      top: auto;
-      bottom: 2px;
-    }
   }
 
-  &__sub-date {
+  &__date {
     display: block;
     margin-top: 30px;
     font-family: $font-family--garamond;
     font-size: 16px;
   }
 
-  &__sub-title {
-    margin: 0;
-    margin-top: 20px;
-    font-size: 20px;
-    text-transform: uppercase;
-  }
-
-  &__sub-text {
+  &__text {
     margin: 0;
     margin-top: 30px;
     font-family: $font-family--garamond;
   }
 
-  &__sub-link {
+  &__link {
     margin-top: 30px;
     margin-bottom: 50px;
     padding-right: 48px;
@@ -94,7 +80,7 @@
     }
   }
 
-  &__sub-icon {
+  &__icon {
     position: absolute;
     top: 2px;
     right: 0;
@@ -104,7 +90,7 @@
     }
   }
 
-  &__sub-photo {
+  &__photo {
     display: block;
     margin-top: 30px;
     width: 100%;
