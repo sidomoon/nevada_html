@@ -1,6 +1,70 @@
 .page-header {
   position: relative;
 
+  &__menu {
+    position: relative;
+
+    &--open {
+      .page-header__toggle {
+
+        span {
+          width: 25px;
+
+          &:first-child {
+            transform: rotate(-45deg) translate(-6px, 0);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:last-child {
+            transform: rotate(45deg) translate(-6px, 0);
+          }
+        }
+      }
+
+      .page-header__list {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 3;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
+    @include max-w(320px) {
+      display: block;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 2px;
+      width: 20px;
+      height: 2px;
+      background-color: #ffffff;
+      transition: 0.5s;
+
+      &:last-child {
+        margin-bottom: none;
+      }
+    }
+  }
+
   &__list {
     @include clearlist;
     display: flex;
@@ -11,6 +75,25 @@
     justify-content: space-between;
     max-width: 450px;
     text-transform: uppercase;
+    transition: 0.5s all;
+
+    @include max-w(320px) {
+      margin: 0;
+      padding-left: 15px;
+      flex-direction: column;
+      max-width: 130px;
+      background-color: rgba(5, 5, 5, 0.9);
+      opacity: 0;
+    }
+
+    li {
+      @include max-w(320px) {
+        margin-bottom: 15px;
+        &:first-child {
+          margin-top: 10px;
+        }
+      }
+    }
   }
 
   &__link {
@@ -38,6 +121,11 @@
     background-position: center;
     background-size: cover;
     min-height: 721px;
+
+    @include max-w(320px) {
+      background-image: url('../images/main-banner-mobile.png');
+      min-height: 200px;
+    }
   }
 
   &__banner {
@@ -48,5 +136,26 @@
     border: 2px solid #781241;
     outline: 10px solid #ffffff;
     width: 390px;
+
+    @include max-w(320px) {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 45px;
+      left: 10%;
+      border: none;
+      outline: none;
+      width: 183px;
+    }
+
+    @include max-w(440px) {
+      width: 80%;
+    }
+  }
+
+  &__logo {
+    @include max-w(320px) {
+      width: 100%;
+    }
   }
 }

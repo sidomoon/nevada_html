@@ -2,7 +2,6 @@
 	position: relative;
 
 	&__list {
-		@include clearlist;
 		display: flex;
 		position: relative;
 		margin: 0 auto;
@@ -27,6 +26,10 @@
 			top: auto;
 			bottom: -5px;
 		}
+
+		@include max-w(650px) {
+			flex-direction: column;
+		}
 	}
 
 	&__item {
@@ -47,6 +50,14 @@
 
 		&:last-child::before {
 			display: none;
+		}
+
+		@include max-w(650px) {
+			width: auto;
+
+			&::before {
+				display: none;
+			}
 		}
 	}
 

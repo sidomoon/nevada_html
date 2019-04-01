@@ -13,7 +13,10 @@
 			@@include('_include/header.html')
 
 			<div class="page-header__banner">
-				<img class="page-header__logo" src="images/logo-big.png" width="254" height="146" alt="photo">
+				<picture class="page-header__logo">
+					<source srcset="images/logo-big-mobile.png" media="(max-width: 320px)">
+					<img src="images/logo-big.png" width="254" height="146" alt="photo">
+				</picture>
 			</div>
 	</div>
 
