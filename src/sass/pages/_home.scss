@@ -1,11 +1,16 @@
 .history {
   padding-top: 100px;
 
+  @include max-w(320px) {
+    padding-top: 50px;
+  }
+
   &__content {
     text-align: center;
   }
 
   &__title {
+    @include fluid-font(16px, 20px, 320px, 1920px);
     margin: 0;
     font-size: 20px;
     color: #333333;
@@ -13,6 +18,7 @@
   }
 
   &__text {
+    @include fluid-font(14px, 20px, 320px, 1920px);
     margin: 0;
     margin-top: 20px;
     font-family: $font-family--garamond;
@@ -38,11 +44,24 @@
   &__item {
     padding: 0 15px;
     width: 33.3%;
+
+    @include max-w(320px) {
+      margin-bottom: 15px;
+      width: 100%;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
 .subscribe {
   margin-top: 100px;
+
+  @include max-w(320px) {
+    margin-top: 55px;
+  }
 
   &__form {
     display: flex;
@@ -69,6 +88,16 @@
       top: auto;
       bottom: -5px;
     }
+
+    @include max-w(320px) {
+      width: 96%;
+
+      &::before,
+      &::after {
+        left: -5px;
+        right: -5px;
+      }
+    }
   }
 
   &__form--focus {
@@ -86,6 +115,7 @@
   }
 
   &__input {
+    @include fluid-font(16px, 20px, 320px, 1920px);
     position: relative;
     font-family: $font-family--garamond;
     color: #333333;
@@ -97,6 +127,7 @@
   }
 
   &__button {
+    @include fluid-font(12px, 15px, 320px, 1920px);
     position: relative;
     width: 265px;
     font-size: 15px;
@@ -129,12 +160,22 @@
       width: 1px;
       background-color: #666666;
     }
+
+    @include max-w(320px) {
+      width: 35%;
+    }
   }
 
   &__icon {
     position: absolute;
     top: 22px;
     right: 0;
+
+    @include max-w(320px) {
+      top: 20px;
+      width: 6px;
+      height: 10px;
+    }
   }
 }
 
@@ -146,16 +187,30 @@ input[type="email"].subscribe__input {
   margin-top: 90px;
   margin-bottom: 105px;
 
+  @include max-w(320px) {
+    margin: 0;
+  }
+
   &__wrapper {
     padding-top: 100px;
     min-height: 430px;
     background-image: url('../images/bottom-banner.png');
     background-repeat: no-repeat;
     background-position: center;
+
+    @include max-w(320px) {
+      margin: 0 -15px;
+      margin-top: 55px;
+      padding-top: 45px;
+      background-image: url('../images/bottom-banner-mobile.png');
+      background-position: top center;
+      min-height: 550px;
+    }
   }
 
   &__content {
     margin: 0 auto;
+    padding-top: 30px;
     width: 370px;
     height: 215px;
     border: 2px solid #781241;
@@ -163,24 +218,45 @@ input[type="email"].subscribe__input {
     background-color: #ffffff;
     text-align: center;
 
-    @include max-w(440px) {
-      width: 80%;
+    @include max-w(320px) {
+      padding: 15px;
+      width: 275px;
+      height: 443px;
+      outline: 15px solid #ffffff;
     }
   }
 
   &__title {
+    @include fluid-font(16px, 20px, 320px, 1920px);
     margin: 0;
-    margin-top: 30px;
-    font-size: 20px;
     color: #333333;
     text-transform: uppercase;
   }
 
   &__text {
+    @include fluid-font(14px, 20px, 320px, 1920px);
     margin: 0;
     margin-top: 30px;
     font-family: $font-family--garamond;
     font-style: italic;
+
+    &--mobile {
+      display: none;
+    }
+
+    @include max-w(320px) {
+      margin-top: 12px;
+      line-height: 22px;
+      font-style: normal;
+
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+      }
+    }
 
     @include max-w(440px) {
       br {

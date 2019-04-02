@@ -1,6 +1,10 @@
 .page-footer {
 	position: relative;
 
+	@include max-w(320px) {
+		margin-top: 55px;
+	}
+
 	&__list {
 		display: flex;
 		position: relative;
@@ -25,6 +29,14 @@
 		&::after {
 			top: auto;
 			bottom: -5px;
+		}
+
+		@include max-w(320px) {
+			&::before,
+			&::after {
+				left: -5px;
+				right: -5px;
+			}
 		}
 
 		@include max-w(650px) {
@@ -54,6 +66,11 @@
 
 		@include max-w(650px) {
 			width: auto;
+			border-bottom: 1px solid #666666;
+
+			&:last-child {
+				border-bottom: none;
+			}
 
 			&::before {
 				display: none;
@@ -62,6 +79,7 @@
 	}
 
 	&__title {
+		@include fluid-font(16px, 18px, 320px, 1920px)
 		margin: 0;
 		margin-top: 40px;
 		margin-bottom: 20px;
@@ -121,5 +139,19 @@
 		font-style: italic;
 		font-size: 16px;
 		text-align: center;
+
+		&--mobile {
+			display: none;
+		}
+
+		@include max-w(320px) {
+			&--desktop {
+				display: none;
+			}
+
+			&--mobile {
+				display: block;
+			}
+		}
 	}
 }

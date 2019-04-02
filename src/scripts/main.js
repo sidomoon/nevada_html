@@ -34,24 +34,18 @@ $(document).ready(function () {
   /* masonry */
   $('.media__list').masonry({
   itemSelector: '.media__item',
-  columnWidth: 500
+  // columnWidth: 500
 });
   /* /masonry */
 
   /* menu toggle */
-  var menu = document.querySelector('.page-header__menu'),
-      toggle = document.querySelector('.page-header__toggle');
+  $('.page-header__menu').removeClass('page-header__menu--open').addClass('page-header__menu--closed');
 
-  menu.classList.remove('page-header__menu--open');
-  menu.classList.add('page-header__menu--closed');
-
-  toggle.addEventListener('click', function() {
-    if (menu.classList.contains('page-header__menu--closed')) {
-      menu.classList.remove('page-header__menu--closed');
-      menu.classList.add('page-header__menu--open');
+  $('.page-header__toggle').on('click', function() {
+    if ($('.page-header__menu').hasClass('page-header__menu--closed')) {
+      $('.page-header__menu').removeClass('page-header__menu--closed').addClass('page-header__menu--open');
     } else {
-      menu.classList.remove('page-header__menu--open');
-      menu.classList.add('page-header__menu--closed');
+      $('.page-header__menu').addClass('page-header__menu--closed').removeClass('page-header__menu--open');
     }
   });
   /* /menu toggle */
