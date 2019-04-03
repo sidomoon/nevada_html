@@ -31,13 +31,16 @@
 
 .media {
 
-
   &__title {
+    @include fluid-font(16px, 20px, 320px, 1920px);
     margin: 0;
     margin-top: 100px;
-    font-size: 20px;
     color: #333333;
     text-align: center;
+
+    @include max-w(320px) {
+      margin-top: 50px;
+    }
   }
 
   &__list {
@@ -45,17 +48,22 @@
     margin-top: 50px;
     margin-bottom: 50px;
     flex-direction: column;
+
+    @include max-w(320px) {
+      margin-top: 35px;
+    }
   }
 
   &__item {
+    margin: 0 1.7%;
     position: relative;
-    width: 48%;
+    width: 46%;
     border-top: 1px solid #666666;
 
     .media__title {
+      @include fluid-font(16px, 20px, 320px, 1920px);
       margin: 0;
       margin-top: 20px;
-      font-size: 20px;
       color: #333333;
       text-transform: uppercase;
       text-align: left;
@@ -70,9 +78,15 @@
       height: 2px;
       background-color: #666666;
     }
+
+    @include max-w(320px) {
+      margin: 0;
+      width: 100%;
+    }
   }
 
   &__date {
+    @include fluid-font(14px, 16px, 320px, 1920px);
     display: block;
     margin-top: 30px;
     font-family: $font-family--garamond;
@@ -80,6 +94,7 @@
   }
 
   &__text {
+    @include fluid-font(14px, 16px, 320px, 1920px);
     margin: 0;
     margin-top: 30px;
     font-family: $font-family--garamond;
@@ -101,6 +116,11 @@
 
     &:hover path {
       fill: #333333;
+    }
+
+    @include max-w(320px) {
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
   }
 
