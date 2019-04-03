@@ -33,8 +33,7 @@ $(document).ready(function () {
 
   /* masonry */
   $('.media__list').masonry({
-  itemSelector: '.media__item',
-  // columnWidth: 500
+  itemSelector: '.media__item'
 });
   /* /masonry */
 

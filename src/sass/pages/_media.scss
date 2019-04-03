@@ -1,10 +1,32 @@
 .page-header__banner--media {
   background-image: url('../images/media-banner.png');
   min-height: 372px;
+
+  @include max-w(320px) {
+    background-image: url('../images/media-banner.png');
+    min-height: 200px;
+  }
 }
 
 .page-header__logo--media {
   margin-top: 35px;
+
+  @include max-w(768px) {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+  }
+
+  @include max-w(320px) {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    background-image: url('../images/logo-big-mobile.png');
+    width: 183px;
+    height: 110px;
+  }
 }
 
 .media {

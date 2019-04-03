@@ -1,10 +1,32 @@
 .page-header__banner--wines {
   background-image: url('../images/wines-banner.png');
   min-height: 372px;
+
+  @include max-w(320px) {
+    background-image: url('../images/wines-banner-mobile.png');
+    min-height: 200px;
+  }
 }
 
 .page-header__logo--wines {
   margin-top: 35px;
+
+  @include max-w(768px) {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+  }
+
+  @include max-w(320px) {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    background-image: url('../images/logo-big-mobile.png');
+    width: 183px;
+    height: 110px;
+  }
 }
 
 .wines {
@@ -13,12 +35,16 @@
   }
 
   &__title {
+    @include fluid-font(16px, 20px, 320px, 1920px);
     margin: 0;
     margin-top: 95px;
-    font-size: 20px;
     color: #333333;
     text-transform: uppercase;
     text-align: center;
+
+    @include max-w(320px) {
+      margin-top: 50px;
+    }
   }
 
   &__list {
@@ -39,14 +65,23 @@
       height: 2px;
       background-color: #666666;
     }
+
+    @include max-w(320px) {
+      margin-top: 35px;
+
+      &::before {
+        left: -5px;
+        right: -5px;
+      }
+    }
   }
 
   &__item {
     border-top: 1px solid #666666;
-  }
 
-  &__item:last-child {
-    border-bottom: 1px solid #666666;
+    &:last-child {
+      border-bottom: 1px solid #666666;
+    }
   }
 
   &__sub-list {
@@ -70,6 +105,14 @@
       background-image: url('../images/icon-bottle.svg');
       background-repeat: no-repeat;
     }
+
+    @include max-w(320px) {
+      width: 100%;
+
+      &::before {
+        right: 0;
+      }
+    }
   }
 
   &__sub-photo {
@@ -85,6 +128,10 @@
     color: #781241;
     top: 58px;
     right: 29px;
+
+    @include max-w(320px) {
+      right: -12px;
+    }
   }
 
   &__sub-item:last-child {
@@ -101,6 +148,16 @@
       width: 1px;
       background-color: #666666;
     }
+
+    @include max-w(320px) {
+      padding: 0;
+      padding-bottom: 30px;
+      width: 100%;
+
+      &::before {
+        display: none;
+      }
+    }
   }
 
   &__sub-item + .wines__sub-title {
@@ -111,6 +168,7 @@
   }
 
   &__sub-text {
+    @include fluid-font(14px, 20px, 320px, 1920px);
     margin: 0;
     margin-top: 10px;
     font-family: $font-family--garamond;
@@ -121,6 +179,7 @@
   }
 
   &__sub-title {
+    @include fluid-font(16px, 20px, 320px, 1920px);
     margin: 0;
     margin-top: 20px;
     color: #333333;
