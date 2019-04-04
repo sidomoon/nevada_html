@@ -184,6 +184,12 @@
       right: 0;
     }
 
+    @include max-w(500px) {
+      background-size: contain;
+      width: 302px;
+      height: 145px;
+    }
+
     @include max-w(320px) {
       position: absolute;
       top: -135px;

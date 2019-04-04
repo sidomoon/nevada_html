@@ -89,6 +89,10 @@
       bottom: -5px;
     }
 
+    @include max-w(460px) {
+      width: 80%;
+    }
+
     @include max-w(320px) {
       width: 96%;
 
@@ -129,7 +133,7 @@
   &__button {
     @include fluid-font(12px, 15px, 320px, 1920px);
     position: relative;
-    width: 265px;
+    width: 42%;
     font-size: 15px;
     color: #781241;
     text-transform: uppercase;
@@ -168,7 +172,7 @@
 
   &__icon {
     position: absolute;
-    top: 22px;
+    top: 18px;
     right: 0;
 
     @include max-w(320px) {
@@ -218,6 +222,12 @@ input[type="email"].subscribe__input {
     background-color: #ffffff;
     text-align: center;
 
+    @include max-w(500px) {
+      padding-top: 15px;
+      width: 260px;
+      height: 105px;
+    }
+
     @include max-w(320px) {
       padding: 15px;
       width: 275px;
@@ -244,6 +254,16 @@ input[type="email"].subscribe__input {
       display: none;
     }
 
+    @include max-w(500px) {
+      margin-top: 12px;
+    }
+
+    @include max-w(440px) {
+      br {
+        display: none;
+      }
+    }
+
     @include max-w(320px) {
       margin-top: 12px;
       line-height: 22px;
@@ -255,12 +275,6 @@ input[type="email"].subscribe__input {
 
       &--mobile {
         display: block;
-      }
-    }
-
-    @include max-w(440px) {
-      br {
-        display: none;
       }
     }
   }
