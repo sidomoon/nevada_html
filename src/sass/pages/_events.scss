@@ -2,6 +2,10 @@
   background-image: url('../images/events-banner.png');
   min-height: 372px;
 
+  @include max-w(500px) {
+    min-height: 270px;
+  }
+
   @include max-w(320px) {
     background-image: url('../images/events-banner-mobile.png');
     min-height: 200px;
@@ -19,10 +23,6 @@
   }
 
   @include max-w(320px) {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0;
     background-image: url('../images/logo-big-mobile.png');
     width: 183px;
     height: 110px;
@@ -38,7 +38,7 @@
     text-transform: uppercase;
     text-align: center;
 
-    @include max-w(320px) {
+    @include max-w(700px) {
       margin-top: 50px;
     }
   }
@@ -61,7 +61,7 @@
       background-color: #666666;
     }
 
-    @include max-w(320px) {
+    @include max-w(700px) {
       margin-top: 35px;
       margin-bottom: 55px;
     }
@@ -72,7 +72,7 @@
     padding-bottom: 50px;
     border-top: 1px solid #666666;
 
-    @include max-w(320px) {
+    @include max-w(700px) {
       &:last-child {
         padding-bottom: 0;
       }
@@ -98,7 +98,7 @@
     text-align: center;
     background-color: #781241;
 
-    @include max-w(320px) {
+    @include max-w(700px) {
       padding: 8px 0;
       width: 59px;
       height: 59px;
@@ -112,6 +112,10 @@
     text-transform: uppercase;
     color: #333333;
     line-height: 16px;
+
+    @include max-w(320px) {
+      min-height: 72px;
+    }
   }
 
   &__sub-text {
@@ -122,7 +126,7 @@
     line-height: 30px;
 
     @include max-w(320px) {
-      margin-top: 40px;
+      margin: 0;
       margin-left: -72px;
       line-height: 24px;
     }
@@ -131,7 +135,7 @@
   &__sub-button {
     display: none;
 
-    @include max-w(320px) {
+    @include max-w(700px) {
       display: block;
       margin-top: 26px;
       margin-left: -72px;
@@ -184,7 +188,7 @@
       fill: #333333;
     }
 
-    @include max-w(320px) {
+    @include max-w(700px) {
       margin-top: 25px;
       padding-right: 40px;
     }
@@ -217,7 +221,7 @@
       background-color: #666666;
     }
 
-    @include max-w(320px) {
+    @include max-w(700px) {
       display: none;
     }
   }

@@ -53,10 +53,6 @@
       display: block;
     }
 
-    @include max-w(320px) {
-      display: block;
-    }
-
     span {
       display: block;
       margin-bottom: 2px;
@@ -85,13 +81,7 @@
     }
 
     @include max-w(320px) {
-      position: absolute;
-      top: -1000px;
-      left: 0;
       width: 100%;
-      height: 100vh;
-      background-color: rgba(5, 5, 5, 0.9);
-      opacity: 0;
     }
   }
 
@@ -113,21 +103,8 @@
       flex-direction: column;
     }
 
-    @include max-w(320px) {
-      margin: 0;
-      padding-left: 15px;
-      flex-direction: column;
-    }
-
     li {
       @include max-w(768px) {
-        margin-bottom: 15px;
-        &:first-child {
-          margin-top: 10px;
-        }
-      }
-
-      @include max-w(320px) {
         margin-bottom: 15px;
         &:first-child {
           margin-top: 10px;
@@ -162,6 +139,14 @@
     background-size: cover;
     min-height: 721px;
 
+    @include max-w(768px) {
+      min-height: 500px;
+    }
+
+    @include max-w(500px) {
+      min-height: 350px;
+    }
+
     @include max-w(320px) {
       background-image: url('../images/main-banner-mobile.png');
       min-height: 200px;
@@ -191,10 +176,7 @@
     }
 
     @include max-w(320px) {
-      position: absolute;
       top: -135px;
-      left: 0;
-      right: 0;
       background-image: url('../images/logo-big-mobile.png');
       width: 183px;
       height: 110px;

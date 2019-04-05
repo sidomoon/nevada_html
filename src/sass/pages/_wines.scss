@@ -2,6 +2,10 @@
   background-image: url('../images/wines-banner.png');
   min-height: 372px;
 
+  @include max-w(500px) {
+    min-height: 270px;
+  }
+
   @include max-w(320px) {
     background-image: url('../images/wines-banner-mobile.png');
     min-height: 200px;
@@ -19,10 +23,6 @@
   }
 
   @include max-w(320px) {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0;
     background-image: url('../images/logo-big-mobile.png');
     width: 183px;
     height: 110px;
@@ -105,7 +105,7 @@
       background-repeat: no-repeat;
     }
 
-    @include max-w(320px) {
+    @include max-w(650px) {
       width: 100%;
 
       &::before {
@@ -128,7 +128,7 @@
     top: 58px;
     right: 29px;
 
-    @include max-w(320px) {
+    @include max-w(650px) {
       right: -12px;
     }
   }
@@ -148,7 +148,7 @@
       background-color: #666666;
     }
 
-    @include max-w(320px) {
+    @include max-w(650px) {
       padding: 0;
       padding-bottom: 30px;
       width: 100%;

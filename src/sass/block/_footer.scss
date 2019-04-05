@@ -31,16 +31,16 @@
 			bottom: -5px;
 		}
 
+		@include max-w(650px) {
+			flex-direction: column;
+		}
+
 		@include max-w(320px) {
 			&::before,
 			&::after {
 				left: -5px;
 				right: -5px;
 			}
-		}
-
-		@include max-w(650px) {
-			flex-direction: column;
 		}
 	}
 
