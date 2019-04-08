@@ -32,6 +32,10 @@
 .wines {
   &__wrapper {
     margin-bottom: 105px;
+
+    @include max-w(320px) {
+      margin-bottom: 50px;
+    }
   }
 
   &__title {
@@ -80,6 +84,10 @@
 
     &:last-child {
       border-bottom: 1px solid #666666;
+
+      @include max-w(320px) {
+        border-bottom: none;
+      }
     }
   }
 
@@ -186,6 +194,20 @@
 
     &:first-child {
       margin-bottom: 30px;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include max-w(650px) {
+        display: block;
+      }
+    }
+
+    &--desktop {
+      @include max-w(650px) {
+        display: none;
+      }
     }
   }
 }

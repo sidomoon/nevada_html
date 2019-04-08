@@ -34,7 +34,7 @@
 .gallery {
   &__list {
     display: flex;
-    margin: 0 -15px;
+    margin: 0 -1.4%;
     margin-top: 50px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -42,7 +42,7 @@
   }
 
   &__item {
-    padding: 0 15px;
+    padding: 0 1.4%;
     width: 33.3%;
 
     @include max-w(320px) {
@@ -90,12 +90,10 @@
     }
 
     @include max-w(460px) {
-      width: 80%;
+      width: 96%;
     }
 
     @include max-w(320px) {
-      width: 96%;
-
       &::before,
       &::after {
         left: -5px;
@@ -223,14 +221,26 @@ input[type="email"].subscribe__input {
     text-align: center;
 
     @include max-w(500px) {
+      padding-top: 20px;
+      width: 300px;
+      height: 145px;
+    }
+
+    @include max-w(400px) {
       padding-top: 15px;
+      width: 280px;
+      height: 125px;
+    }
+
+    @include max-w(350px) {
+      padding-top: 10px;
       width: 260px;
       height: 105px;
     }
 
     @include max-w(320px) {
       padding: 15px;
-      width: 275px;
+      width: 100%-9%;
       height: 443px;
       outline: 15px solid #ffffff;
     }
@@ -256,12 +266,6 @@ input[type="email"].subscribe__input {
 
     @include max-w(500px) {
       margin-top: 12px;
-    }
-
-    @include max-w(440px) {
-      br {
-        display: none;
-      }
     }
 
     @include max-w(320px) {

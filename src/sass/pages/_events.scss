@@ -113,7 +113,7 @@
     color: #333333;
     line-height: 16px;
 
-    @include max-w(320px) {
+    @include max-w(700px) {
       min-height: 72px;
     }
   }
@@ -125,7 +125,7 @@
     font-family: $font-family--garamond;
     line-height: 30px;
 
-    @include max-w(320px) {
+    @include max-w(700px) {
       margin: 0;
       margin-left: -72px;
       line-height: 24px;

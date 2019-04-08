@@ -38,13 +38,13 @@ $(document).ready(function () {
   /* /masonry */
 
   /* menu toggle */
-  $('.page-header__menu').removeClass('page-header__menu--open').addClass('page-header__menu--closed');
-
   $('.page-header__toggle').on('click', function() {
     if ($('.page-header__menu').hasClass('page-header__menu--closed')) {
       $('.page-header__menu').removeClass('page-header__menu--closed').addClass('page-header__menu--open');
+      $('html').css('overflow', 'hidden');
     } else {
       $('.page-header__menu').addClass('page-header__menu--closed').removeClass('page-header__menu--open');
+      $('html').css('overflow', 'scroll');
     }
   });
   /* /menu toggle */
